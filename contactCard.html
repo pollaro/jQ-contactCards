@@ -40,11 +40,12 @@
                     var last = $('input[name=lastName]').val();
                     var des = $('input[name=desc]').val();
 
-                    $('body').append('<div class="cards"><div class="front"><span class="name">'+first+'</span><br><span class="name">'+last+'</span><br>Click for more information!</div></div>');
+                    $('body').append('<div class="cards"><div class="front"><span class="name">'+first+'</span><br><span class="name">'+last+'</span><br>Click for more information!</div><div class="back"><p class="descriptionP">'+des+'</p></div></div>');
 
                     return false;
                 });
 
+                // $('.back').hide();
                 $(document).on('click','.cards',function(){
                     $(this).find('.back').toggle();
                     $(this).find('.front').toggle();
