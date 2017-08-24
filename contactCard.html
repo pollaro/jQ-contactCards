@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Contact Card Collection</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="formBox">
+            <form id="entryForm">
+                First Name: <input type="text" name="firstName">
+                <br>
+                Last Name: <input type="text" name="lastName">
+                <br>
+                Description:
+                <br>
+                <input id="descrip" type="textarea" name="desc">
+                <br>
+                <input type="submit" name="submitBut" value="Add Contact">
+            </form>
+        </div>
+        <!-- <div class="cards">
+            <div class="front">
+                <span class="name"></span>
+                <br>
+                <span class="name"></span>
+                <br>
+                Click for more information!
+            </div>
+            <div class="back">
+                <p class="descriptionP"></p>
+            </div>
+        </div> -->
+
+        <script>
+            $(document).ready(function(){
+                $('#entryForm').submit(function(){
+                    var first = $('input[name=firstName]').val();
+                    var last = $('input[name=lastName]').val();
+                    var des = $('input[name=desc]').val();
+
+                    $('body').append('<div class="cards"><div class="front"><span class="name">'+first+'</span><br><span class="name">'+last+'</span><br>Click for more information!</div></div>');
+
+                    return false;
+                });
+
+                $(document).on('click','.cards',function(){
+                    $(this).find('.back').toggle();
+                    $(this).find('.front').toggle();
+                })
+            })
+        </script>
+    </body>
+</html>

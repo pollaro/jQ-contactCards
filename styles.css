@@ -1,0 +1,49 @@
+*{
+    margin:0px;
+    padding: 0px;
+}
+
+.formBox{
+    margin-left: 30px;
+    margin-top: 20px;
+    background-color: #b1b1b1;
+    display: block;
+    width: 260px;
+    height: 280px;
+    padding: 10px;
+}
+
+#entryForm{
+    text-align: right;
+}
+
+#descrip{
+    width:250px;
+    height:200px;
+}
+
+.cards{
+    /*display: inline-block;*/
+    width: 200px;
+    height: 100px;
+    margin: 10px 30px;
+    background-color: #ffa84e;
+    border: solid black thin;
+    text-align: center;
+}
+
+.name{
+    font-weight: bold;
+    font-size: 16pt;
+    padding-top: 5px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.front{
+    display: inline-block;
+}
+
+.back{
+    display: none;
+}
